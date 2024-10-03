@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="nord">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videomarked - Convertidor de Videos Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="p-4">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold text-left">Videomarked - Convertidor de Videos Online</h1>
+        </div>
+    </nav>
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="max-w-lg w-full bg-white shadow-md rounded-lg p-5">
+            <form id="uploadForm" action="/convert" method="POST" enctype="multipart/form-data" class="space-y-6">
+                <div class="form-control">
+                    <label for="video" class="label">
+                        <span class="label-text text-xl font-semibold text-gray-700">Sube tu video:</span>
+                    </label>
+                    <input type="file" name="video" id="video" required class="file-input file-input-bordered w-full " />
+                </div>
+                <div class="form-control">
+                    <label for="format" class="label">
+                        <span class="label-text text-xl font-semibold text-gray-700">Formato de salida:</span>
+                    </label>
+                    <select name="format" id="format" required class="select select-bordered w-full">
+                        <option value="mp4">MP4</option>
+                        <option value="avi">AVI</option>
+                        <option value="mkv">MKV</option>
+                        <option value="mov">MOV</option>
+                        <option value="wmv">WMV</option>
+                        <option value="flv">FLV</option>
+                        <option value="webm">WEBM</option>
+                        <option value="ogv">OGV</option>
+                        <option value="mpeg">MPEG</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-neutral w-full text-lg  text-white">Convertir Video</button>
+            </form>
+            <div class="divider divider-neutral my-8"></div>
+            <p class="text-gray-500 text-sm text-center">
+                Videomarked tiene como objetivo brindar una herramienta fácil y orientada a la conversión de videos de manera online.
+                El código se puede encontrar en <a href="https://github.com/LuigiValentino/videomarked-flaskwebapp" class="text-blue-500">Github</a>.
+                <br>Cualquier duda/inquietud o bug pueden contactarme directamente a <a href="mailto:luigiadduccidev@gmail.com" class="text-blue-500">luigiadduccidev@gmail.com</a>.
+                <br>Lo más recomendable en este tipo de proyectos es descargar el código y correrlo localmente para poder ver errores y/o bugs, y tener al día todas las librerías y dependencias iguales a las que se usaron en desarrollo.
+            </p>
+            <footer class="mt-12">
+                <p class="text-center text-gray-400 text-sm">
+                    © 2024 <a href="https://luigiadducci.netlify.app" class="text-blue-500">Luigi Adducci</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
